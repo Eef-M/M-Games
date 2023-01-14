@@ -178,7 +178,7 @@ const DetailGame = () => {
             onClick={prevSlide}
           />
           <Box>
-            {screenshotGame.map((ss, index) => (
+            {screenshotGame?.map((ss, index) => (
               <Box key={index} className={slideIndex === index + 1 ? "slide anim" : "slide"}>
                 {slideIndex === index + 1 ? (
                   <ImgSSBox
@@ -213,7 +213,7 @@ const DetailGame = () => {
             my: "5px",
           }}
         >
-          {screenshotGame.map((slide, index) => (
+          {screenshotGame?.map((slide, index) => (
             <DotBox
               key={slide.id}
               sx={{

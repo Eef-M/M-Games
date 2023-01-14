@@ -24,12 +24,12 @@ const PlatformsGames = () => {
 
   return (
     <BoxContainerPlatform>
-      {platformGames.map((pg) =>
+      {platformGames?.map((pg) =>
         pg.id === Number(id) ? (
           <Box key={pg.id} sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 3 }}>
             <PlatformNameText>{pg.name}</PlatformNameText>
             <PlatformGameBox>
-              {pg.games.map((game) => (
+              {pg.games?.map((game) => (
                 <Link to={`/detail/${game.id}`} state={{ screenshot: game.short_screenshots }} style={{ textDecoration: "none" }}>
                   <BoxGamePlatform bgcolor="primary.box" key={game.id}>
                     <TitleGame color="secondary">{game.name}</TitleGame>

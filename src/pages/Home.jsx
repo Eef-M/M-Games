@@ -49,7 +49,7 @@ const Home = () => {
       ) : (
         <div>
           <HomeBox sx={{ my: 4 }}>
-            {games.map((game) => (
+            {games?.map((game) => (
               <Link to={`/detail/${game.id}`} style={{ textDecoration: "none", position: "relative" }} key={game.id}>
                 <GameBox boxShadow={3} bgcolor="primary.box">
                   <img id="image" src={game.background_image} width="340px" height="191px" alt="game_image" />

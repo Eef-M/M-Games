@@ -30,7 +30,7 @@ const Platforms = () => {
         </Box>
       ) : (
         <PlatformsContainerBox>
-          {platforms.map((platform) => (
+          {platforms?.map((platform) => (
             <Link
               to={`/platforms_games/${platform.id}`}
               state={{

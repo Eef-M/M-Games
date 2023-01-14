@@ -22,11 +22,9 @@ const GenresGames = () => {
     getGenres();
   }, []);
 
-  console.log(genresGames);
-
   return (
     <BoxContainer>
-      {genresGames.map((gg) =>
+      {genresGames?.map((gg) =>
         gg.id === Number(id) ? (
           <Box
             key={gg.id}
@@ -40,7 +38,7 @@ const GenresGames = () => {
           >
             <GenreNameText>{gg.name}</GenreNameText>
             <GenreGameBox>
-              {gg.games.map((game) => (
+              {gg.games?.map((game) => (
                 <Link to={`/detail/${game.id}`} state={{ screenshot: game.short_screenshots }} style={{ textDecoration: "none" }}>
                   <BoxGame bgcolor="primary.box" key={game.id}>
                     <TitleGame color="secondary">{game.name}</TitleGame>

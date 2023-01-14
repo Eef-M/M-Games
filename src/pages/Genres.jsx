@@ -45,7 +45,7 @@ const Genres = () => {
         </Box>
       ) : (
         <GenresContainerBox>
-          {genres.map((genre) => (
+          {genres?.map((genre) => (
             <Link to={`/genres_games/${genre.id}`} state={{ games: genre.games, name: genre.name }} style={{ textDecoration: "none" }} key={genre.id}>
               <GenresCard>
                 <ImageBG src={genre.image_background} />
