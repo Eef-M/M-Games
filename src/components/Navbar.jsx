@@ -45,9 +45,7 @@ function Navbar(props) {
   const modeString = mode.toString();
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography sx={{ my: 2, fontSize: "1.3rem", fontWeight: "bold", fontFamily: "Chivo Mono" }}>
-        M-GAMES<Typography sx={{ fontSize: "0.8rem", fontFamily: "Chivo Mono" }}>Created by Eef Mekelliano</Typography>
-      </Typography>
+      <Typography sx={{ my: 2, fontSize: "1.3rem", fontWeight: "bold", fontFamily: "Chivo Mono" }}>M-GAMES</Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -65,7 +63,7 @@ function Navbar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <>
+    <div>
       <StyledNavbar position="static" mode={modeString}>
         <Toolbar>
           <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: "none" } }}>
@@ -84,7 +82,6 @@ function Navbar(props) {
           </Typography>
           <SportsEsports sx={{ marginRight: "10px", display: { xs: "none", sm: "block" } }} />
           <Typography
-            component="div"
             sx={{
               flexGrow: 1,
               display: { xs: "none", sm: "block" },
@@ -94,7 +91,6 @@ function Navbar(props) {
             }}
           >
             M-GAMES
-            <Typography sx={{ fontSize: "0.8rem", fontFamily: "Chivo Mono" }}>Created by Eef Mekelliano</Typography>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "flex" }, justifyContent: "center", alignItems: "center" }}>
             {navItems.map((item) => (
@@ -124,7 +120,7 @@ function Navbar(props) {
         </Drawer>
       </Box>
       <Toolbar />
-    </>
+    </div>
   );
 }
 

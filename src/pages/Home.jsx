@@ -39,13 +39,15 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div>
       {isLoading ? (
         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Typography sx={{ fontWeight: "bold", fontSize: "24px", fontFamily: "Chivo Mono" }}>Loading...</Typography>
+          <Typography sx={{ fontWeight: "bold", fontSize: "24px", fontFamily: "Chivo Mono" }} component="h3">
+            Loading...
+          </Typography>
         </Box>
       ) : (
-        <>
+        <div>
           <HomeBox sx={{ my: 4 }}>
             {games.map((game) => (
               <Link to={`/detail/${game.id}`} style={{ textDecoration: "none", position: "relative" }} key={game.id}>
@@ -59,9 +61,9 @@ const Home = () => {
           <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Pagination count={30} shape="rounded" color="primary" onChange={handleClickPage} page={page} siblingCount={0} size="small" />
           </Box>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 };
 

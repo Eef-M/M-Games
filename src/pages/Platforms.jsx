@@ -23,7 +23,7 @@ const Platforms = () => {
     getPlatforms();
   }, []);
   return (
-    <>
+    <div>
       {isLoading ? (
         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
           <Typography sx={{ fontWeight: "bold", fontSize: "24px", fontFamily: "Chivo Mono" }}>Loading...</Typography>
@@ -48,7 +48,7 @@ const Platforms = () => {
           ))}
         </PlatformsContainerBox>
       )}
-    </>
+    </div>
   );
 };
 

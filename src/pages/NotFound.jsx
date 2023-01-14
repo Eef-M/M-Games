@@ -6,12 +6,8 @@ const NotFound = () => {
   return (
     <DetailBox>
       <ContentBox>
-        <Typography variant="h2" sx={{ fontFamily: "Chivo Mono", fontWeight: "bold" }}>
-          NOT FOUND!
-        </Typography>
-        <Typography variant="span" sx={{ fontFamily: "Chivo Mono", fontWeight: "bold" }}>
-          Please go to Another Page!
-        </Typography>
+        <Typography sx={{ fontFamily: "Chivo Mono", fontWeight: "bold", fontSize: "24px" }}>NOT FOUND!</Typography>
+        <Typography sx={{ fontFamily: "Chivo Mono", fontWeight: "bold", fontSize: "14px" }}>Please go to Another Page!</Typography>
       </ContentBox>
     </DetailBox>
   );
