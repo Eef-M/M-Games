@@ -48,7 +48,7 @@ function Navbar(props) {
       <Typography sx={{ my: 2, fontSize: "1.3rem", fontWeight: "bold", fontFamily: "Chivo Mono" }}>M-GAMES</Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {navItems?.map((item) => (
           <ListItem key={item.id} disablePadding component={Link} to={item.to}>
             <StyledListItemButton mode={modeString} className={item.to === location.pathname ? "active" : ""}>
               <ListItemText primary={item.text} />
